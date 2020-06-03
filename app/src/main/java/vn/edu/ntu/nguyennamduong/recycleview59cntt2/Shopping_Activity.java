@@ -67,9 +67,11 @@ public class Shopping_Activity extends AppCompatActivity {
         btnBuy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                controller.clearShoppingCart();
+                txtShoppingCart.setText("Không có mặt hàng trong giỏ hàng!");
                 Intent intent = new Intent(Shopping_Activity.this, Buy_Activity.class);
                 startActivity(intent);
-                deleteShoppingCart();
+
             }
         });
     }
